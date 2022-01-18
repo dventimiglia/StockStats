@@ -1,0 +1,1 @@
+src/test/resources/test4.js

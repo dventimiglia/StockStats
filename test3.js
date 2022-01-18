@@ -1,0 +1,1 @@
+src/test/resources/test3.js
