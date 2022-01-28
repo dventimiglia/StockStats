@@ -44,32 +44,32 @@ forced for now to get all the data.  For this reason alone, it would
 be worth finding and plugging in a different third-party data
 provider.
 
-    API_KEY=<Alpha Vantage API key> java -cp target/stockstats-1.0-SNAPSHOT.jar com.davidaventimiglia.doordash.FetchQuotes <ticker symbol>... 
+    API_KEY=<Alpha Vantage API key> java -cp target/stockstats-1.0-SNAPSHOT.jar com.davidaventimiglia.redacted.FetchQuotes <ticker symbol>... 
 	
 Parse raw quote feed data into quote objects, taking the data in from
 standard input, and writing the rendered quote data (in an extremely
 simple rendering) to standard output.
 
-    cat <file> | java -cp target/stockstats-1.0-SNAPSHOT.jar com.davidaventimiglia.doordash.main.ParseQuotes
+    cat <file> | java -cp target/stockstats-1.0-SNAPSHOT.jar com.davidaventimiglia.redacted.main.ParseQuotes
 	
 Sample files for MSFT and GOOGL are provided in this directory.
 
 Generate stats (max profit potential over last 180 days) for quote
 feed data being fed in from standard input.
 
-    cat <file> | java -cp target/stockstats-1.0-SNAPSHOT.jar com.davidaventimiglia.doordash.main.StreamStats
+    cat <file> | java -cp target/stockstats-1.0-SNAPSHOT.jar com.davidaventimiglia.redacted.main.StreamStats
 	
 Generate stats (max profit potential over last 180 days) for quote
 feed data fetched live from the third-party data service.
 
-    API_KEY=<API key> java -cp target/stockstats-1.0-SNAPSHOT.jar com.davidaventimiglia.doordash.main.SymbolStats <stock ticker symbol>...
+    API_KEY=<API key> java -cp target/stockstats-1.0-SNAPSHOT.jar com.davidaventimiglia.redacted.main.SymbolStats <stock ticker symbol>...
 	
 	
 Start a web service that generates and returns stats (max profit over
 the last 180 days) for quote feed data fetched live from the
 third-party data service.
 
-    API_KEY=IYCIAEV4C0G4HQED java -cp target/stockstats-1.0-SNAPSHOT.jar com.davidaventimiglia.doordash.main.SymbolStatsServer
+    API_KEY=IYCIAEV4C0G4HQED java -cp target/stockstats-1.0-SNAPSHOT.jar com.davidaventimiglia.redacted.main.SymbolStatsServer
 	
 Get stats data for a symbol using the web service.
 
